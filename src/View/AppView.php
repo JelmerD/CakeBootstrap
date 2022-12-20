@@ -18,6 +18,7 @@ namespace JelmerD\Bootstrap\View;
 
 use Cake\View\View;
 use JelmerD\Bootstrap\View\Helper\HtmlHelper;
+use JelmerD\Bootstrap\View\Helper\TableHelper;
 
 /**
  * Application View
@@ -26,6 +27,7 @@ use JelmerD\Bootstrap\View\Helper\HtmlHelper;
  *
  * @link https://book.cakephp.org/4/en/views.html#the-app-view
  * @property HtmlHelper $Html
+ * @property TableHelper $Table
  */
 class AppView extends View
 {
@@ -41,5 +43,6 @@ class AppView extends View
     public function initialize(): void
     {
         $this->loadHelper('JelmerD/Bootstrap.Html');
+        $this->loadHelper('JelmerD/Bootstrap.Table');
     }
 }
